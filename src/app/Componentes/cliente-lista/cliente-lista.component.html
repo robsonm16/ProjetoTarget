@@ -1,0 +1,31 @@
+<div class="row my-3">
+    <div class="col-md-12">
+        <button class="btn btn-primary" (click)="Adicionar()">Adcionar</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Comandos</th>
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>Numero</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of ListaClientes">
+                    <td>
+                        <button (click)="Excluir(item.id)"><i class="fa fa-trash"></i></button>
+                        <button (click)="Editar(item)"><i class="fa fa-pencil"></i></button>
+                    </td>
+                    <td>{{item.Nome}}</td>
+                    <td>{{item.Endereco}}</td>
+                    <td>{{item.Numero}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
