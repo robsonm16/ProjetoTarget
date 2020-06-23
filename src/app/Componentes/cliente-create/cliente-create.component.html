@@ -4,7 +4,7 @@
             <label for="nome" class="col-sm-12 col-form-label">Nome</label>
             <div class="col-sm-12">
                 <input type="text" required  class="form-control" id="nome"
-         [(ngModel)]="cliente.Nome" name="nome">
+         [(ngModel)]="cliente.nome" name="nome">
             </div>
         </div>
         
@@ -12,26 +12,27 @@
             <label for="nome" class="col-sm-12 col-form-label">Endereço</label>
             <div class="col-sm-12">
                 <input type="text" required  class="form-control" id="endereco"
-         [(ngModel)]="cliente.Endereco" name="endereco">
+         [(ngModel)]="cliente.endereco" name="endereco">
             </div>
         </div>
         <div class="form-group row">
             <label for="nome" class="col-sm-12 col-form-label">Numero</label>
             <div class="col-sm-3">
-                <input type="text" type="number" required  class="form-control" id="numero"
-         [(ngModel)]="cliente.Numero" name="numero">
+                <input type="text" type="text" required  class="form-control" id="numero"
+         [(ngModel)]="cliente.numero" name="numero">
             </div>
         </div>
         <div class="form-group row">
             <label for="nome" class="col-sm-12 col-form-label">Bairro</label>
             <div class="col-sm-12">
                 <input type="text" required  class="form-control" id="bairro"
-         [(ngModel)]="cliente.Bairro" name="bairro">
+         [(ngModel)]="cliente.bairro" name="bairro">
             </div>
         </div>
 
         <div class="form-group row">
             <div class="offset-sm-12 col-sm-12 text-right">
+                <a routerLink="/cliente" class="btn btn-secundary mx-3">Voltar</a>
                 <button [disabled]="!clienteForm.form.valid" type="submit" class="btn btn-primary">Salvar</button>
             </div>
         </div>

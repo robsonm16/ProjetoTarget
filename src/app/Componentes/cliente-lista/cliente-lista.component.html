@@ -1,6 +1,6 @@
 <div class="row my-3">
     <div class="col-md-12">
-        <button class="btn btn-primary" (click)="Adicionar()">Adcionar</button>
+        <a class="btn btn-primary" routerLink="adicionar">Adicionar</a>
     </div>
 </div>
 <div class="row">
@@ -12,17 +12,19 @@
                     <th>Nome</th>
                     <th>Endereço</th>
                     <th>Numero</th>
+                    <th>Bairro</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let item of ListaClientes">
                     <td>
-                        <button (click)="Excluir(item.id)"><i class="fa fa-trash"></i></button>
-                        <button (click)="Editar(item)"><i class="fa fa-pencil"></i></button>
+                        <button class="btn btn-danger btn-sm mx-1" (click)="Excluir(item.id)"><i class="icon-trash"></i></button>
+                        <a class="btn btn-danger btn-sm mx-1" [routerLink]="['editar', item.id]"><i class="icon-pencil"></i></a>
                     </td>
-                    <td>{{item.Nome}}</td>
-                    <td>{{item.Endereco}}</td>
-                    <td>{{item.Numero}}</td>
+                    <td>{{item.nome}}</td>
+                    <td>{{item.endereco}}</td>
+                    <td>{{item.numero}}</td>
+                    <td>{{item.bairro}}</td>
                 </tr>
             </tbody>
         </table>

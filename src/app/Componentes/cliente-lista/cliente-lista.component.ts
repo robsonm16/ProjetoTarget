@@ -20,13 +20,15 @@ export class ClienteListaComponent implements OnInit {
        this.ListaClientes = res;
      });
   }
+
   Excluir(id){
+    
+    this.clienteService.DeleteCliente(id).subscribe((res) => {
+      console.log(res);
+      this.BuscarClientes();
+    });
 
   }
-  Editar(cliente: ClienteModel){
 
-  }
-  Adicionar(){
-    this.router.navigate(['cliente/adicionar']);
-  }
+
 }

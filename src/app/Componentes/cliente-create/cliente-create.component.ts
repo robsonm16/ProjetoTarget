@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { ClienteModel } from '../../Models/ClienteModel';
 import { ClienteService } from '../../Services/cliente.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-cliente-form',
-  templateUrl: './cliente-form.component.html',
-  styleUrls: ['./cliente-form.component.css']
+  selector: 'app-cliente-create',
+  templateUrl: './cliente-create.component.html',
+  styleUrls: ['./cliente-create.component.css']
 })
-export class ClienteFormComponent implements OnInit {
+export class ClienteCreateComponent implements OnInit {
 
   cliente: ClienteModel;
 
-  constructor( private clienteService: ClienteService, private router: Router ) { }
+  constructor( private clienteService: ClienteService, private router: Router, private route: ActivatedRoute ) {
+    
+  }
 
   ngOnInit(): void {
     this.cliente = new ClienteModel();

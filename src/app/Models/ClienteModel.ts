@@ -1,7 +1,7 @@
 export class  ClienteModel{
     id: string;
-    Nome: string;
-    Endereco: string;
-    Numero: string;
-    Bairro: string;
+    nome: string;
+    endereco: string;
+    numero: string;
+    bairro: string;
 }

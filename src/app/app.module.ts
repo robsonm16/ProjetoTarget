@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
-import { RouteModule } from './route-module/route-module.module';
+import { RouteModule } from './modules/route-module.module';
 import { ClienteListaComponent } from './Componentes/cliente-lista/cliente-lista.component';
-import { ClienteFormComponent } from './Componentes/cliente-form/cliente-form.component';
+import { ClienteCreateComponent } from './Componentes/cliente-create/cliente-create.component';
 import { HttpClientModule } from '@angular/common/http';
+
+import { ClienteEditComponent } from './componentes/cliente-edit/cliente-edit.component';
 
 
 @NgModule({
@@ -14,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     MenuComponent,
     ClienteListaComponent,
-    ClienteFormComponent
+    ClienteCreateComponent,
+    ClienteEditComponent
   ],
   imports: [
     BrowserModule,

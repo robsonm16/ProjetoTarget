@@ -3,15 +3,15 @@ import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Routes, RouterModule} from '@angular/router';
 import { HomeComponent } from '../Componentes/home/home.component';
-import { ClienteFormComponent } from '../Componentes/cliente-form/cliente-form.component';
+import { ClienteCreateComponent } from '../Componentes/cliente-create/cliente-create.component';
+import { ClienteEditComponent } from '../componentes/cliente-edit/cliente-edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
   { path: 'cliente', component: ClienteListaComponent },
-  { path: 'cliente/adicionar', component: ClienteFormComponent },
-  { path: 'cliente/editar/:id', component: ClienteFormComponent },
-  { path: 'cliente/visualizar/:id', component: ClienteFormComponent }
+  { path: 'cliente/adicionar', component: ClienteCreateComponent },
+  { path: 'cliente/editar/:id', component: ClienteEditComponent },
 ];
 
 @NgModule({
